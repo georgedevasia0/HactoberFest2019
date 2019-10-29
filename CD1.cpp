@@ -12,7 +12,7 @@ using namespace std;
 #define precision(x,p) fixed<<setprecision(p)<<x
 #define mod 1000000007
 #define PI 3.14159265358979
-typedef long long ll;
+typedef unsigned long ll;
 int main()
 {
     fastIO
@@ -35,7 +35,7 @@ int main()
             for(ll j=1;j<=p;j++){
                 for(ll k=1;k<=p;k++){
                     ll t = ((((n%i)%j)%k)%n);
-                    if(t==mx){
+                    if(t<mx){
                         c++;
                         cout<<i<<"^"<<j<<"^"<<k<<endl;
                     }
