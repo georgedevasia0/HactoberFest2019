@@ -432,14 +432,14 @@ public class Main implements Runnable {
 //            hackedSort(a, p, great + 1, right, false, depth + 1);
         }
     }
-    
+    /* Performing a random shuffle and calling a swap function with random elements*/
     private void randomShuffle(int[] a, int left, int right) {
         for (int i = left; i <= right; i++) {
             int j = left + rnd.nextInt(i - left + 1);
             swap(a, i, j);
         }
     }
-    
+    /* Performing interchanging of elements */
     private void swap(int[] a, int i, int j) {
         int t = a[i];
         a[i] = a[j];
@@ -542,7 +542,7 @@ public class Main implements Runnable {
         }
         pw.close();
     }
-    
+    /* This is the main method where program starts */
     public static void main(String[] args) {
         new Thread(null, new Main(), "", 128*1024*1024).start();
     }
